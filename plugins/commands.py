@@ -53,7 +53,7 @@ IST = pytz.timezone(Config.TIME_ZONE)
 if Config.DATABASE_URI:
     from utils import db
 
-HOME_TEXT = "<b>Hey  [{}](tg://user?id={}) 🙋‍♂️\n\nIam A Bot Built To Play or Stream Videos In Telegram VoiceChats.\nI Can Stream Any YouTube Video Or A Telegram File Or Even A YouTube Live.</b>"
+HOME_TEXT = "<b>𝐻𝑒𝑦  [{}](tg://user?id={}) 🙋‍♂️\n\n𝐼 𝑎𝑚 𝐴 𝐵𝑜𝑡 𝐵𝑢𝑖𝑙𝑡 𝑇𝑜 𝑃𝑙𝑎𝑦 𝑜𝑟 𝑆𝑡𝑟𝑒𝑎𝑚 𝑉𝑖𝑑𝑒𝑜𝑠 𝐼𝑛 𝑇𝑒𝑙𝑒𝑔𝑟𝑎𝑚 𝑉𝑜𝑖𝑐𝑒𝐶𝒉𝑎𝑡𝑠.\n𝐼 𝐶𝑎𝑛 𝑆𝑡𝑟𝑒𝑎𝑚 𝐴𝑛𝑦 𝑌𝑜𝑢𝑇𝑢𝑏𝑒 𝑉𝑖𝑑𝑒𝑜 𝑂𝑟 𝐴 𝑇𝑒𝑙𝑒𝑔𝑟𝑎𝑚 𝐹𝑖𝑙𝑒 𝑂𝑟 𝐸𝑣𝑒𝑛 𝐴 𝑌𝑜𝑢𝑇𝑢𝑏𝑒 𝐿𝑖𝑣𝑒.</b>"
 admin_filter=filters.create(is_admin) 
 
 @Client.on_message(filters.command(['start', f"start@{Config.BOT_USERNAME}"]))
@@ -63,22 +63,22 @@ async def start(client, message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(f"Play", callback_data='help_play'),
-                        InlineKeyboardButton(f"Settings", callback_data=f"help_settings"),
-                        InlineKeyboardButton(f"Recording", callback_data='help_record'),
+                        InlineKeyboardButton(f"𝑃𝑙𝑎𝑦", callback_data='help_play'),
+                        InlineKeyboardButton(f"𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠", callback_data=f"help_settings"),
+                        InlineKeyboardButton(f"𝑅𝑒𝑐𝑜𝑟𝑑𝑖𝑛𝑔", callback_data='help_record'),
                     ],
                     [
-                        InlineKeyboardButton("Scheduling", callback_data="help_schedule"),
-                        InlineKeyboardButton("Controling", callback_data='help_control'),
-                        InlineKeyboardButton("Admins", callback_data="help_admin"),
+                        InlineKeyboardButton("𝑆𝑐𝒉𝑒𝑑𝑢𝑙𝑖𝑛𝑔", callback_data="help_schedule"),
+                        InlineKeyboardButton("𝐶𝑜𝑛𝑡𝑟𝑜𝑙𝑖𝑛𝑔", callback_data='help_control'),
+                        InlineKeyboardButton("𝐴𝑑𝑚𝑖𝑛𝑠", callback_data="help_admin"),
                     ],
                     [
-                        InlineKeyboardButton(f"Misc", callback_data='help_misc'),
-                        InlineKeyboardButton("Close", callback_data="close"),
+                        InlineKeyboardButton(f"𝑀𝑖𝑠𝑐", callback_data='help_misc'),
+                        InlineKeyboardButton("𝐶𝑙𝑜𝑠𝑒", callback_data="close"),
                     ],
                 ]
                 )
-            await message.reply("Learn to use the VCPlayer, Showing help menu, Choose from the below options.",
+            await message.reply("𝐿𝑒𝑎𝑟𝑛 𝑡𝑜 𝑢𝑠𝑒 𝑡𝒉𝑒 𝑉𝐶𝑃𝑙𝑎𝑦𝑒𝑟, 𝑆𝒉𝑜𝑤𝑖𝑛𝑔 𝒉𝑒𝑙𝑝 𝑚𝑒𝑛𝑢, 𝐶𝒉𝑜𝑜𝑠𝑒 𝑓𝑟𝑜𝑚 𝑡𝒉𝑒 𝑏𝑒𝑙𝑜𝑤 𝑜𝑝𝑡𝑖𝑜𝑛𝑠.",
                 reply_markup=reply_markup,
                 disable_web_page_preview=True
                 )
@@ -148,25 +148,25 @@ async def show_help(client, message):
     reply_markup=InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("Play", callback_data='help_play'),
-                InlineKeyboardButton("Settings", callback_data=f"help_settings"),
-                InlineKeyboardButton("Recording", callback_data='help_record'),
+                InlineKeyboardButton("𝑃𝑙𝑎𝑦", callback_data='help_play'),
+                InlineKeyboardButton("𝑆𝑒𝑡𝑡𝑖𝑛𝑔𝑠", callback_data=f"help_settings"),
+                InlineKeyboardButton("𝑅𝑒𝑐𝑜𝑟𝑑𝑖𝑛𝑔", callback_data='help_record'),
             ],
             [
-                InlineKeyboardButton("Scheduling", callback_data="help_schedule"),
-                InlineKeyboardButton("Controling", callback_data='help_control'),
-                InlineKeyboardButton("Admins", callback_data="help_admin"),
+                InlineKeyboardButton("𝑆𝑐𝒉𝑒𝑑𝑢𝑙𝑖𝑛𝑔", callback_data="help_schedule"),
+                InlineKeyboardButton("𝐶𝑜𝑛𝑡𝑟𝑜𝑙𝑖𝑛𝑔", callback_data='help_control'),
+                InlineKeyboardButton("𝐴𝑑𝑚𝑖𝑛𝑠", callback_data="help_admin"),
             ],
             [
-                InlineKeyboardButton("Misc", callback_data='help_misc'),
-                InlineKeyboardButton("Config Vars", callback_data='help_env'),
-                InlineKeyboardButton("Close", callback_data="close"),
+                InlineKeyboardButton("𝑀𝑖𝑠𝑐", callback_data='help_misc'),
+                InlineKeyboardButton("𝐶𝑜𝑛𝑓𝑖𝑔 𝑉𝑎𝑟𝑠", callback_data='help_env'),
+                InlineKeyboardButton("𝐶𝑙𝑜𝑠𝑒", callback_data="close"),
             ],
         ]
         )
     if message.chat.type != "private" and message.from_user is None:
         k=await message.reply(
-            text="I cant help you here, since you are an anonymous admin. Get help in PM",
+            text="𝐼 𝑐𝑎𝑛𝑡 𝒉𝑒𝑙𝑝 𝑦𝑜𝑢 𝒉𝑒𝑟𝑒, 𝑠𝑖𝑛𝑐𝑒 𝑦𝑜𝑢 𝑎𝑟𝑒 𝑎𝑛 𝑎𝑛𝑜𝑛𝑦𝑚𝑜𝑢𝑠 𝑎𝑑𝑚𝑖𝑛. 𝐺𝑒𝑡 𝒉𝑒𝑙𝑝 𝑖𝑛 𝑃𝑀",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -192,8 +192,8 @@ async def repo_(client, message):
             InlineKeyboardButton('⚙️ 𝑆𝑢𝑝𝑝𝑜𝑟𝑡 𝐺𝑟𝑜𝑢𝑝2', url='https://t.me/All_Dear_Comrade'),     
         ],
         [
-            InlineKeyboardButton("🎞 How to Deploy", url='https://t.me/LOG_AFK'),
-            InlineKeyboardButton('🗑 Close', callback_data='close'),
+            InlineKeyboardButton("🎞 𝑂𝑤𝑛𝑒𝑟", url='https://t.me/LOG_AFK'),
+            InlineKeyboardButton('🗑 𝐶𝑙𝑜𝑠𝑒', callback_data='close'),
         ]
     ]
     await message.reply("<b>The source code of this bot is public and can be found at <a href=https://t.me/Log_afk>VCPlayerBot.</a>\nYou can deploy your own bot and use in your group.\n\nFeel free to star☀️ the repo if you liked it 🙃.</b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
