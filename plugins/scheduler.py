@@ -63,13 +63,13 @@ async def schedule_vc(bot, message):
         type=""
         yturl=""
         ysearch=""
-        msg = await message.reply_text("⚡️ **Checking recived input..**")
+        msg = await message.reply_text("⚡️ **𝐂𝐡𝐞𝐜𝐤𝐢𝐧𝐠 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐌𝐞𝐝𝐢𝐚✌️..**")
         if message.reply_to_message and message.reply_to_message.video:
-            await msg.edit("⚡️ **Checking Telegram Media...**")
+            await msg.edit("⚡️ **𝐂𝐡𝐞𝐜𝐤𝐢𝐧𝐠 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐌𝐞𝐝𝐢𝐚💫...**")
             type='video'
             m_video = message.reply_to_message.video       
         elif message.reply_to_message and message.reply_to_message.document:
-            await msg.edit("⚡️ **Checking Telegram Media...**")
+            await msg.edit("✨ **𝐂𝐡𝐞𝐜𝐤𝐢𝐧𝐠 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐌𝐞𝐝𝐢𝐚❤️...**")
             m_video = message.reply_to_message.document
             type='video'
             if not "video" in m_video.mime_type:
@@ -77,7 +77,7 @@ async def schedule_vc(bot, message):
         elif message.reply_to_message and message.reply_to_message.audio:
             #if not Config.IS_VIDEO:
                 #return await message.reply("Play from audio file is available only if Video Mode if turned off.\nUse /settings to configure ypur player.")
-            await msg.edit("⚡️ **Checking Telegram Media...**")
+            await msg.edit("🧩 **𝐂𝐡𝐞𝐜𝐤𝐢𝐧𝐠 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐌𝐞𝐝𝐢𝐚🔰...**")
             type='audio'
             m_video = message.reply_to_message.audio       
         else:
