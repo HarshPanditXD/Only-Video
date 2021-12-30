@@ -148,11 +148,11 @@ async def schedule_vc(bot, message):
             await sync_to_db()
         elif type in ["youtube", "query", "ytdl_s"]:
             if type=="youtube":
-                await msg.edit("⚡️ **Fetching Video From YouTube...**")
+                await msg.edit("**💫𝐏𝐥𝐚𝐲𝐢𝐧𝐠 𝐕𝐢𝐝𝐞𝐨 ❤️ 𝐅𝐫𝐨𝐦 𝐘𝐨𝐮𝐓𝐮𝐛𝐞✨**")
                 url=yturl
             elif type=="query":
                 try:
-                    await msg.edit("⚡️ **Fetching Video From YouTube...**")
+                    await msg.edit("**💫𝐏𝐥𝐚𝐲𝐢𝐧𝐠 𝐕𝐢𝐝𝐞𝐨 ❤️ 𝐅𝐫𝐨𝐦 𝐘𝐨𝐮𝐓𝐮𝐛𝐞✨**")
                     ytquery=ysearch
                     results = YoutubeSearch(ytquery, max_results=1).to_dict()
                     url = f"https://youtube.com{results[0]['url_suffix']}"
