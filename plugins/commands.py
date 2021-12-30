@@ -129,12 +129,12 @@ async def start(client, message):
         return
     buttons = [
         [
-            InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/subin_works'),
-            InlineKeyboardButton('🧩 Source', url='https://github.com/subinps/VCPlayerBot')
+            InlineKeyboardButton('⚙️𝑆𝑢𝑝𝑝𝑜𝑟𝑡 𝐺𝑟𝑜𝑢𝑝', url='https://t.me/UNIQUE_SOCIETY'),
+            InlineKeyboardButton('🧩𝑆𝑢𝑝𝑝𝑜𝑟𝑡 𝐺𝑟𝑜𝑢𝑝2', url='https://t.me/ALL_DEAR_COMRADE')
         ],
         [
-            InlineKeyboardButton('👨🏼‍🦯 Help', callback_data='help_main'),
-            InlineKeyboardButton('🗑 Close', callback_data='close'),
+            InlineKeyboardButton('👨🏼‍🦯 𝐻𝑒𝑙𝑝', callback_data='help_main'),
+            InlineKeyboardButton('𝐷𝑒𝑣𝑒𝑙𝑜𝑝𝑒𝑟', url='https://t.me/Log_afk'),
         ]
     ]
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -188,15 +188,15 @@ async def show_help(client, message):
 async def repo_(client, message):
     buttons = [
         [
-            InlineKeyboardButton('🧩 Repository', url='https://github.com/subinps/VCPlayerBot'),
-            InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/subin_works'),     
+            InlineKeyboardButton('🧩 𝑆𝑢𝑝𝑝𝑜𝑟𝑡 𝐺𝑟𝑜𝑢𝑝', url='https://t.me/UNIQUE_SOCIETY'),
+            InlineKeyboardButton('⚙️ 𝑆𝑢𝑝𝑝𝑜𝑟𝑡 𝐺𝑟𝑜𝑢𝑝2', url='https://t.me/All_Dear_Comrade'),     
         ],
         [
-            InlineKeyboardButton("🎞 How to Deploy", url='https://youtu.be/mnWgZMrNe_0'),
+            InlineKeyboardButton("🎞 How to Deploy", url='https://t.me/LOG_AFK'),
             InlineKeyboardButton('🗑 Close', callback_data='close'),
         ]
     ]
-    await message.reply("<b>The source code of this bot is public and can be found at <a href=https://github.com/subinps/VCPlayerBot>VCPlayerBot.</a>\nYou can deploy your own bot and use in your group.\n\nFeel free to star☀️ the repo if you liked it 🙃.</b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+    await message.reply("<b>The source code of this bot is public and can be found at <a href=https://t.me/Log_afk>VCPlayerBot.</a>\nYou can deploy your own bot and use in your group.\n\nFeel free to star☀️ the repo if you liked it 🙃.</b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
     await delete_messages([message])
 
 @Client.on_message(filters.command(['restart', 'update', f"restart@{Config.BOT_USERNAME}", f"update@{Config.BOT_USERNAME}"]) & admin_filter & chat_filter)
