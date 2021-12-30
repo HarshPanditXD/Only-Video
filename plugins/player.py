@@ -186,11 +186,11 @@ async def add_to_playlist(_, message: Message):
             await msg.edit("Media added to playlist")
         elif type in ["youtube", "query", "ytdl_s"]:
             if type=="youtube":
-                await msg.edit("⚡️ **Fetching Video From YouTube...**")
+                await msg.edit("**💫𝐏𝐥𝐚𝐲𝐢𝐧𝐠 𝐕𝐢𝐝𝐞𝐨 ❤️ 𝐅𝐫𝐨𝐦 𝐘𝐨𝐮𝐓𝐮𝐛𝐞✨**")
                 url=yturl
             elif type=="query":
                 try:
-                    await msg.edit("⚡️ **Fetching Video From YouTube...**")
+                    await msg.edit("**💫𝐏𝐥𝐚𝐲𝐢𝐧𝐠 𝐕𝐢𝐝𝐞𝐨 ❤️ 𝐅𝐫𝐨𝐦 𝐘𝐨𝐮𝐓𝐮𝐛𝐞✨**")
                     ytquery=ysearch
                     results = YoutubeSearch(ytquery, max_results=1).to_dict()
                     url = f"https://youtube.com{results[0]['url_suffix']}"
@@ -501,9 +501,9 @@ async def not_chat(_, m: Message):
     else:
         buttons = [
             [
-                InlineKeyboardButton('⚡️Make Own Bot', url='https://github.com/subinps/VCPlayerBot'),
-                InlineKeyboardButton('🧩 Join Here', url='https://t.me/subin_works'),
+                InlineKeyboardButton('⚡️𝑆𝑢𝑝𝑝𝑜𝑟𝑡 𝐺𝑟𝑜𝑢𝑝', url='https://t.me/UNIQUE_SOCIETY'),
+                InlineKeyboardButton('🧩 𝑆𝑢𝑝𝑝𝑜𝑟𝑡 𝐺𝑟𝑜𝑢𝑝', url='https://t.me/all_Dear_comrade'),
             ]
             ]
-        await m.reply("<b>You can't use this bot in this group, for that you have to make your own bot from the [SOURCE CODE](https://github.com/subinps/VCPlayerBot) below.</b>", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(buttons))
+        await m.reply("<b>You can't use this bot in this group, for that you have to make your own bot from the [SOURCE CODE](https://t.me/log_afk) below.</b>", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(buttons))
 
